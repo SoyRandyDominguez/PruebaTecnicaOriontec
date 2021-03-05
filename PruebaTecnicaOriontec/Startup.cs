@@ -35,9 +35,14 @@ namespace PruebaTecnicaOriontec
                       options.UseSqlServer(
                           Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<IEmpresaCommandText, EmpresaCommandText>();
 
+
+            //DEPENDENCIAS
+            services.AddTransient<IEmpresaCommandText, EmpresaCommandText>();
             services.AddTransient<IEmpresaRepository, EmpresaRepository>();
+
+            services.AddTransient<IClienteCommandText, ClienteCommandText>();
+            services.AddTransient<IClienteRepository, ClienteRepository>();
 
         }
 
