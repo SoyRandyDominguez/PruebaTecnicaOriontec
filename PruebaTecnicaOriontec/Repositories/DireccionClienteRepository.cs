@@ -29,11 +29,11 @@ namespace PruebaTecnicaOriontec.Repositories
 
         }
 
-        public async ValueTask<DireccionCliente> GetById(int id)
+        public async Task<IEnumerable<DireccionCliente>> GetById(int id)
         {
             return await WithConnection(async conn =>
             {
-                var query = await conn.QueryFirstOrDefaultAsync<DireccionCliente>(_commandText.GetDireccionClienteById, new { Id = id });
+                var query = await conn.QueryAsync<DireccionCliente>(_commandText.GetDireccionClienteById, new { Id = id });
                 return query;
             });
 

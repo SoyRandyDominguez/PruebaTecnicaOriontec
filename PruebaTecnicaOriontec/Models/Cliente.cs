@@ -10,5 +10,6 @@ namespace PruebaTecnicaOriontec.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
         public int EmpresaId { get; set; }
+        public string Empresa { get; set; }
     }
 }

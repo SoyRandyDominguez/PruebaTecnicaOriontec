@@ -8,7 +8,7 @@ namespace PruebaTecnicaOriontec.Repositories
 {
     public interface IDireccionClienteRepository
     {
-        ValueTask<DireccionCliente> GetById(int id);
+        Task<IEnumerable<DireccionCliente>> GetById(int id);
         Task AddDireccionCliente(DireccionCliente entity);
         Task UpdateDireccionCliente(DireccionCliente entity, int id);
         Task RemoveDireccionCliente(int id);

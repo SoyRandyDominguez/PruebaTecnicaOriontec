@@ -19,7 +19,7 @@ namespace PruebaTecnicaOriontec.Controllers
         {
             _ClienteRepository = ClienteRepository;
         }
-
+            
         [HttpGet]
         public async Task<ActionResult<Cliente>> GellAll()
         {

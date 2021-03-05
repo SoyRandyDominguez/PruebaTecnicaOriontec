@@ -44,7 +44,7 @@ namespace PruebaTecnicaOriontec.Repositories
             await WithConnection(async conn =>
             {
                 await conn.ExecuteAsync(_commandText.AddCliente,
-                    new { Nombre = entity.Nombre });
+                    new { Nombre = entity.Nombre, EmpresaId= entity.EmpresaId});
             });
 
         }
