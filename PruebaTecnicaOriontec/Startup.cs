@@ -44,6 +44,9 @@ namespace PruebaTecnicaOriontec
             services.AddTransient<IClienteCommandText, ClienteCommandText>();
             services.AddTransient<IClienteRepository, ClienteRepository>();
 
+            services.AddTransient<IDireccionClienteCommandText, DireccionClienteCommandText>();
+            services.AddTransient<IDireccionClienteRepository, DireccionClienteRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -8,7 +8,7 @@ namespace PruebaTecnicaOriontec.Models
     public class DireccionCliente
     {
         public int Id { get; set; }
-        public int ClienteId { get; set; }
+        public int IdCliente { get; set; }
         public string Direccion { get; set; }
     }
 }
