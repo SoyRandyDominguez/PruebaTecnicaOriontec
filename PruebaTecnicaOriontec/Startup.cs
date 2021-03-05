@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PruebaTecnicaOriontec.Helpers;
+using PruebaTecnicaOriontec.Repositories;
 
 namespace PruebaTecnicaOriontec
 {
@@ -35,6 +36,8 @@ namespace PruebaTecnicaOriontec
                           Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddTransient<IEmpresaCommandText, EmpresaCommandText>();
+
+            services.AddTransient<IEmpresaRepository, EmpresaRepository>();
 
         }
 
